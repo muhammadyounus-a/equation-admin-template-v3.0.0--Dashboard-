@@ -1,0 +1,120 @@
+#sidebar .theme-brand div.theme-logo img {
+    width: auto !important;
+}
+.navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .drodpown-title {
+    border-top: none !important;
+}
+
+.navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .notification-scroll {
+    height: auto !important;
+}
+.wd-aut{
+    width: 50% !important;
+}
+.mgb-1 {
+    margin-bottom: 1rem !important;
+}
+.mgb-2 {
+    margin-bottom: 2rem !important;
+}
+.mgb-3 {
+    margin-bottom: 3rem !important;
+}
+.mgb-4 {
+    margin-bottom: 4rem !important;
+}
+.mgb-5 {
+    margin-bottom: 5rem !important;
+}
+.mgb-6 {
+    margin-bottom: 6rem !important;
+}
+.ml-39 {
+    margin-left: 39px !important;
+}
+.ml-neg10 {
+    margin-left: -10px !important;
+}
+.mgb-7 {
+    margin-bottom: 7rem !important;
+}
+.mgb-8 {
+    margin-bottom: 8rem !important;
+}
+.ml-10{
+    margin-left: 10rem !important;
+}
+.widget-t-sales-widget.widget-m-orders .media .icon {
+    background-color: #eceffe !important;
+    color: #4361ee !important;
+}
+.widget-t-sales-widget.widget-m-customers .media .icon {
+    background-color: #fbeced !important;
+    color: #e7515a !important;
+}
+.widget-t-sales-widget.widget-m-income .media .icon {
+    background-color: #ddf5f0 !important;
+    color: #00ab55 !important;
+}
+.widget-t-sales-widget.widget-m-orders .media .media-body .widget-text {
+    color: #4361ee !important;
+}
+.widget-t-sales-widget.widget-m-customers .media .media-body .widget-text {
+    color: #e7515a !important;
+}
+
+.widget-t-sales-widget.widget-m-income .media .media-body .widget-text {
+    color: #00ab55 !important;
+}
+.text-green {
+    color: green !important;
+}
+.text-red {
+    color: red !important;
+}
+.text-blue {
+    color: blue !important;
+}
+.text-black{
+    color: #515365 !important;
+}
+.searchable-container #btn-add-contact {
+    margin-right: 0px !important;
+}
+.sidebar-wrapper.sidebar-theme .theme-brand .sidebar-toggle .btn-toggle svg {
+    color: #3b3f5c !important;
+}
+#sidebar .theme-brand {
+    padding: 15px 25px 15px 25px !important;
+}
+.bdy-bckgrnd {
+    background-image: url('banner3.jpg');
+}
+.seperator .seperator-text {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0px !important;
+}
+.pdl-0 {
+    padding-left: 0px !important;
+}
+.mt-20 {
+    margin-top: 20px !important;
+}
+label {
+    color: #3b3f5c !important;
+}
+.abel-regular {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.fw-bold {
+    font-weight: bold !important;
+}
+.fs-small {
+    font-size: 12px !important;
+}
+.invoice .content-section .inv--head-section {
+    margin-bottom: 20px;
+}
