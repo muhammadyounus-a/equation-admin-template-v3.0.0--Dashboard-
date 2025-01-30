@@ -118,3 +118,19 @@ label {
 .invoice .content-section .inv--head-section {
     margin-bottom: 20px;
 }
+
+.show-card, .show-card-1 {
+    display: none;
+}
+
+.main-card-items {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
