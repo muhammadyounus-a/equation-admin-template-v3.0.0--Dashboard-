@@ -119,7 +119,7 @@ label {
     margin-bottom: 20px;
 }
 
-.show-card, .show-card-1,.enquiry-card,.occupancy-card,.income-card {
+.show-card, .show-card-1,.enquiry-card,.occupancy-card,.income-card,.expenses-card {
     display: none;
 }
 
