@@ -40,7 +40,7 @@ function occupancyBtn() {
 
 // back button code
 function backBtn() {
-    let showCards = document.querySelectorAll(".show-card, .occupancy-card, .income-card, .enquiry-card, .show-card-1,.expenses-card");
+    let showCards = document.querySelectorAll(".show-card, .occupancy-card, .income-card, .enquiry-card, .show-card-1,.expenses-card, .quick-card, .revenue-card");
     let mainCard = document.querySelectorAll(".main-card-items");
     showCards.forEach(card => {
         if (card.style.display === "none" || card.style.display === "") {
@@ -91,7 +91,7 @@ function incomeBtn() {
 
 // income page script
 function expensesBtn() {
-    let showCards = document.querySelectorAll(".expenses-card,.show-card, .show-card-1");
+    let showCards = document.querySelectorAll(".expenses-card,.expenses-card, .show-card-1");
     showCards.forEach(card => {
         if (card.style.display === "none" || card.style.display === "") {
             card.style.display = "block"; // Show all show cards
@@ -103,5 +103,54 @@ function expensesBtn() {
     let mainCard = document.querySelectorAll(".main-card-items");
     mainCard.forEach(card => {
         card.classList.toggle("hidden"); // Toggle hidden class
+    });
+}
+
+// quickBtn page script
+function quickBtn() {
+    let showCards = document.querySelectorAll(".quick-card, .show-card-1");
+    showCards.forEach(card => {
+        if (card.style.display === "none" || card.style.display === "") {
+            card.style.display = "block"; // Show all show cards
+            if (card.classList.contains("show-card-1")) {
+                card.style.display = "flex"; // Set flex for show-card-1
+            }
+        }
+    });
+    let mainCard = document.querySelectorAll(".main-card-items");
+    mainCard.forEach(card => {
+        card.classList.toggle("hidden"); // Toggle hidden class
+    });
+}
+
+// revenue code
+function revenueBtn() {
+    let showCards = document.querySelectorAll(".revenue-card, .show-card-1, .show-card-2");
+
+    showCards.forEach(card => {
+        if (card.classList.contains("show-card-1")) {
+            card.style.display = "none";
+        } else if (card.classList.contains("show-card-2")) {
+            card.style.display = "block";
+            card.style.display = "flex";
+        } else {
+            card.style.display = "block";
+        }
+    });
+
+    let quickCard = document.querySelectorAll(".quick-card");
+    quickCard.forEach(card => {
+        card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
+    });
+}
+
+function backBtn1() {
+    let showCards = document.querySelectorAll(".show-card-2, .revenue-card");
+    let quickCard = document.querySelectorAll(".quick-card, .show-card-1");
+    showCards.forEach(card => {
+        card.style.display = "none";
+    });
+    quickCard.forEach(card => {
+        card.style.display = "flex";
     });
 }

@@ -277,6 +277,20 @@
                             <input type="date" id="date" name="date" class="form-control">
                         </div>
                     </div>
+                    <div class="justify-content-between align-items-center mt-4 show-card-2">
+                        <div class="d-flex">
+                            <button onclick="backBtn1()" style="border: 0px;background-color: transparent;font-size: 20px;"><i class="fa fa-arrow-left"></i></button>
+                            <button style="background-color: rgb(243 249 255); border: 1px solid #c0c0c0; padding: 5px 20px; border-radius: 50px; margin-left: 20px;">Sayer</button>
+                            <button style="background-color: rgb(243 249 255); border: 1px solid #c0c0c0; padding: 5px 20px; border-radius: 50px; margin-left: 10px;">⁠Arkan</button>
+                            <button style="background-color: rgb(243 249 255);border: 1px solid #c0c0c0; padding: 5px 20px; border-radius: 50px; margin-left: 10px; ">⁠Mirqab</button>
+                            <button style="background-color: rgb(243 249 255);border: 1px solid #c0c0c0; padding: 5px 20px; border-radius: 50px; margin-left: 10px; ">⁠Royal Plaza</button>
+                            <button style="background-color: rgb(243 249 255);border: 1px solid #c0c0c0; padding: 5px 20px; border-radius: 50px; margin-left: 10px; ">⁠Burj Marina</button>
+                            <button style="background-color: rgb(243 249 255);border: 1px solid #c0c0c0; padding: 5px 20px; border-radius: 50px; margin-left: 10px; ">⁠Doha Souq</button>
+                        </div>
+                        <div class="">
+                            <input type="date" id="date" name="date" class="form-control">
+                        </div>
+                    </div>
                     <div class="row layout-top-spacing">
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing show-card">
@@ -388,7 +402,7 @@
                         </div>
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 main-card-items">
-                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                            <button onclick="quickBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <div class="widget widget-t-sales-widget widget-m-customers" style="border: 1px solid #e4e4e4 !important;width: 88% !important; height: auto !important;display: flex;align-items: center;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 16 16"><path fill="currentColor" d="M9.93 4.138a1.25 1.25 0 0 1 1.14 0l2.25 1.155c.418.214.68.643.68 1.112v3.189c0 .469-.262.898-.68 1.112l-2.25 1.155a1.25 1.25 0 0 1-1.14 0l-2.25-1.155A1.25 1.25 0 0 1 7 9.594v-3.19c0-.468.262-.897.68-1.111zM8.552 6.775a.5.5 0 0 0 .223.671L10 8.058v1.441a.5.5 0 0 0 1 0V8.058l1.224-.612a.5.5 0 1 0-.448-.894L10.5 7.19l-1.276-.638a.5.5 0 0 0-.671.223M1.5 7.5a.5.5 0 0 0 0 1h3a.5.5 0 1 0 0-1zm.5-2a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m.5 4.5a.5.5 0 0 0 0 1h3a.5.5 0 1 0 0-1z"/></svg>
                                 <h6 class="mt-3 ms-4">Quick Access</h6>
@@ -466,186 +480,134 @@
                             </div>
                         </div>
 
+                        <!-- Invoice Section -->
                         <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing income-card">
                             <div class="widget widget-three">
                                 <div class="widget-heading" style="margin-bottom:20px;">
                                     <h5 class="abel-regular">Invoice</h5>
-    
-                                    <div class="task-action">
-                                        <div class="dropdown">
-                                            <a class="dropdown-toggle" href="#" role="button" id="summary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                            </a>
-    
-                                            <div class="dropdown-menu left" aria-labelledby="summary" style="will-change: transform;">
-                                                <a class="dropdown-item" href="#">View Report</a>
-                                            </div>
-                                        </div>
-                                    </div>
-    
                                 </div>
                                 <div class="widget-content">
-    
                                     <div class="order-summary">
-    
+                                        <!-- Total Invoiced Amount on Rent -->
                                         <div class="summary-list">
                                             <div class="w-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
-                                                    <h6>Total invoiced amount on rent
-                                                        </h6>
+                                                    <h6>Total invoiced amount on rent</h6>
                                                     <p class="summary-count">QAR 92,600</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 48%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-    
+
+                                        <!-- Other Income Invoiced (Services & Meeting Room Booking) -->
                                         <div class="summary-list">
                                             <div class="w-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
                                                     <h6>Other income invoiced (Services & Meeting room booking)</h6>
                                                     <p class="summary-count">QAR 55,085</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 27%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-    
+
+                                        <!-- Total Invoice -->
                                         <div class="summary-list">
                                             <div class="w-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
-                                                    <h6>Total</h6>
+                                                    <h6>Total Invoice</h6>
                                                     <p class="summary-count">QAR 1,47,685</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 72%" aria-valuenow="140" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-                                        
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Realisation Section -->
                         <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing income-card">
                             <div class="widget widget-three">
                                 <div class="widget-heading" style="margin-bottom:20px;">
                                     <h5 class="abel-regular">Realisation</h5>
-    
-                                    <div class="task-action">
-                                        <div class="dropdown">
-                                            <a class="dropdown-toggle" href="#" role="button" id="summary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                            </a>
-    
-                                            <div class="dropdown-menu left" aria-labelledby="summary" style="will-change: transform;">
-                                                <a class="dropdown-item" href="#">View Report</a>
-                                            </div>
-                                        </div>
-                                    </div>
-    
                                 </div>
                                 <div class="widget-content">
-    
                                     <div class="order-summary">
-    
+                                        <!-- Total Realised Amount on Rent -->
                                         <div class="summary-list">
                                             <div class="w-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
-                                                    <h6>Total realised amount on rent
-                                                        </h6>
+                                                    <h6>Total realised amount on rent</h6>
                                                     <p class="summary-count">QAR 90,100</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 47%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-    
+
+                                        <!-- Total Realised Amount on Other Income -->
                                         <div class="summary-list">
                                             <div class="w-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
-                                                    <h6>Other income realised</h6>
+                                                    <h6>Total realised amount on others</h6>
                                                     <p class="summary-count">QAR 50,200</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 25%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-    
+
+                                        <!-- Total Realisation -->
                                         <div class="summary-list">
                                             <div class="w-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
-                                                    <h6>Total</h6>
+                                                    <h6>Total Realisation</h6>
                                                     <p class="summary-count">QAR 1,40,300</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 70%" aria-valuenow="140" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-                                        
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -671,124 +633,174 @@
                                 </div>
 
                                 <div class="widget-content">
-                                    <div id="s-line"></div>
+                                    <div id="expense_details"></div>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- expenses card -->
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing expenses-card">
+                            <div class="widget widget-t-sales-widget widget-m-sales card-shadow">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <!-- Overheads icon: Dollar symbol -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign">
+                                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                                            <path d="M17 8h-6a4 4 0 0 0 0 8h6"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="widget-text abel-regular text-muted">Overheads</p>
+                                        <p class="widget-numeric-value text-dark abel-regular">$1,200</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex w-bottom">
+                                    <p class="widget-total-stats text-success abel-regular">+5% this week</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing expenses-card">
+                            <div class="widget widget-t-sales-widget widget-m-orders card-shadow">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <!-- Additional Expenses icon: Wallet -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wallet">
+                                            <path d="M3 8v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8H3z"></path>
+                                            <path d="M21 6H3V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="widget-text abel-regular text-muted">Additional Expenses</p>
+                                        <p class="widget-numeric-value text-dark abel-regular">$450</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex w-bottom">
+                                    <p class="widget-total-stats text-danger abel-regular">-3% this week</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing expenses-card">
+                            <div class="widget widget-t-sales-widget widget-m-customers card-shadow">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <!-- Rent/Service Charges icon: Office Building -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-apartment">
+                                            <path d="M4 21h16M5 4V2h14v2M5 4h14m-7 4v10M5 9v12m14-3V9m0-4v12"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="media-body abel-regular">
+                                        <p class="widget-text text-muted">Rent & Utilities</p> <!-- Shortened heading -->
+                                        <p class="widget-numeric-value text-dark">$3,500</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex w-bottom abel-regular">
+                                    <p class="widget-total-stats text-success">+2% this week</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- expensess bar -->
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing expenses-card">
                             <div class="widget widget-three">
                                 <div class="widget-heading" style="margin-bottom:20px;">
-                                    <h5 class="abel-regular">Income Overview (Invoice)</h5>
-    
+                                    <h5 class="abel-regular">Financial Overview</h5>
+                        
                                     <div class="task-action">
                                         <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="summary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
                                             </a>
-    
+                        
                                             <div class="dropdown-menu left" aria-labelledby="summary" style="will-change: transform;">
                                                 <a class="dropdown-item" href="#">View Report</a>
                                             </div>
                                         </div>
                                     </div>
-    
                                 </div>
                                 <div class="widget-content">
-    
+                        
                                     <div class="order-summary">
-    
-                                        <div class="summary-list">
-                                            <div class="w-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                            </div>
-                                            <div class="w-summary-details">
-                                                
-                                                <div class="w-summary-info abel-regular">
-                                                    <h6>Total invoiced amount on rent
-                                                        </h6>
-                                                    <p class="summary-count">QAR 92,600</p>
-                                                </div>
-    
-                                                <div class="w-summary-stats">
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 48%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="200"></div>
-                                                    </div>
-                                                </div>
-    
-                                            </div>
-    
-                                        </div>
-    
-                                        <div class="summary-list">
-                                            <div class="w-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
-                                            </div>
-                                            <div class="w-summary-details">
-                                                
-                                                <div class="w-summary-info abel-regular">
-                                                    <h6>Other income invoiced (Services & Meeting room booking)</h6>
-                                                    <p class="summary-count">QAR 55,085</p>
-                                                </div>
-    
-                                                <div class="w-summary-stats">
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 27%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="200"></div>
-                                                    </div>
-                                                </div>
-    
-                                            </div>
-    
-                                        </div>
-    
+                        
+                                        <!-- Total Expense -->
                                         <div class="summary-list">
                                             <div class="w-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
-                                                    <h6>Total</h6>
-                                                    <p class="summary-count">QAR 1,47,685</p>
+                                                    <h6>Total Expense</h6>
+                                                    <p class="summary-count">QAR 120,000</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 72%" aria-valuenow="140" aria-valuemin="0" aria-valuemax="200"></div>
+                                                        <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 60%" aria-valuenow="120" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-
+                        
+                                        <!-- Total Realised Income -->
                                         <div class="summary-list">
                                             <div class="w-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 8h-6a4 4 0 0 0 0 8h6"></path></svg>
                                             </div>
                                             <div class="w-summary-details">
-                                                
                                                 <div class="w-summary-info abel-regular">
-                                                    <h6>Total invoiced amount on rent
-                                                        </h6>
-                                                    <p class="summary-count">QAR 92,600</p>
+                                                    <h6>Total Realised Income</h6>
+                                                    <p class="summary-count">QAR 150,000</p>
                                                 </div>
-    
                                                 <div class="w-summary-stats">
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 48%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="200"></div>
+                                                        <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 75%" aria-valuenow="150" aria-valuemin="0" aria-valuemax="200"></div>
                                                     </div>
                                                 </div>
-    
                                             </div>
-    
                                         </div>
-                                        
+                        
+                                        <!-- Profit/Loss -->
+                                        <div class="summary-list">
+                                            <div class="w-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M12 2a10 10 0 0 1 10 10H12V2zM12 12v10a10 10 0 0 1-10-10h10z"></path></svg>
+                                            </div>
+                                            <div class="w-summary-details">
+                                                <div class="w-summary-info abel-regular">
+                                                    <h6>Profit/Loss</h6>
+                                                    <p class="summary-count">QAR 30,000</p>
+                                                </div>
+                                                <div class="w-summary-stats">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 40%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <!-- Overall Profit Percentage -->
+                                        <div class="summary-list">
+                                            <div class="w-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><path d="M18 20V10M12 20V4M6 20V14"></path></svg>
+                                            </div>
+                                            <div class="w-summary-details">
+                                                <div class="w-summary-info abel-regular">
+                                                    <h6>Overall Profit Percentage</h6>
+                                                    <p class="summary-count">25%</p>
+                                                </div>
+                                                <div class="w-summary-stats">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
                                     </div>
-                                    
+                        
                                 </div>
                             </div>
-                        </div> 
+                        </div>                           
 
                         <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing expenses-card">
                             <div class="widget widget-chart-three">
@@ -812,7 +824,7 @@
                                     </div>
                                 </div>
                                 <div class="widget-content">
-                                    <div id="expense_detailss"></div>
+                                    <div id="mixed-chart"></div>
                                 </div>
                             </div>
                         </div>
@@ -821,95 +833,241 @@
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Date</th>
-                                            <th class="text-center" scope="col">Sales</th>
+                                            <th scope="col">Expense Type</th>
+                                            <th scope="col">Month</th>
+                                            <th class="text-center" scope="col">Amount</th>
                                             <th class="text-center" scope="col">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Shaun Park</td>
-                                            <td>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                <span class="table-inner-text">25 Apr</span>
-                                            </td>
-                                            <td class="text-center">320</td>
+                                            <td>Rent</td>
+                                            <td>Jan</td>
+                                            <td class="text-center">$1500</td>
                                             <td class="text-center">
                                                 <span class="badge badge-light-success">Approved</span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Alma Clarke</td>
-                                            <td>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                <span class="table-inner-text">26 Apr</span>
-                                            </td>
-                                            <td class="text-center">110</td>
+                                            <td>Utilities</td>
+                                            <td>Feb</td>
+                                            <td class="text-center">$300</td>
                                             <td class="text-center">
                                                 <span class="badge badge-light-secondary">Pending</span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Vincent Carpenter</td>
-                                            <td>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                <span class="table-inner-text">05 May</span>
+                                            <td>Office Supplies</td>
+                                            <td>Mar</td>
+                                            <td class="text-center">$250</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-success">Approved</span>
                                             </td>
-                                            <td class="text-center">210</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Travel</td>
+                                            <td>Apr</td>
+                                            <td class="text-center">$500</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-info">In Progress</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Marketing</td>
+                                            <td>May</td>
+                                            <td class="text-center">$700</td>
                                             <td class="text-center">
                                                 <span class="badge badge-light-danger">Rejected</span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Xavier</td>
-                                            <td>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                <span class="table-inner-text">18 May</span>
+                                            <td>Salaries</td>
+                                            <td>Jun</td>
+                                            <td class="text-center">$5000</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-success">Approved</span>
                                             </td>
-                                            <td class="text-center">784</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Equipment</td>
+                                            <td>Jul</td>
+                                            <td class="text-center">$1200</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-secondary">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Miscellaneous</td>
+                                            <td>Aug</td>
+                                            <td class="text-center">$400</td>
                                             <td class="text-center">
                                                 <span class="badge badge-light-info">In Progress</span>
                                             </td>
-                                            <tr>
-                                                <td>Alma Clarke</td>
-                                                <td>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                    <span class="table-inner-text">26 Apr</span>
-                                                </td>
-                                                <td class="text-center">110</td>
-                                                <td class="text-center">
-                                                    <span class="badge badge-light-secondary">Pending</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Vincent Carpenter</td>
-                                                <td>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                    <span class="table-inner-text">05 May</span>
-                                                </td>
-                                                <td class="text-center">210</td>
-                                                <td class="text-center">
-                                                    <span class="badge badge-light-danger">Rejected</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Xavier</td>
-                                                <td>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                    <span class="table-inner-text">18 May</span>
-                                                </td>
-                                                <td class="text-center">784</td>
-                                                <td class="text-center">
-                                                    <span class="badge badge-light-info">In Progress</span>
-                                                </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
+                            </div>                            
                         </div>
                        
+                        <!-- Quick Access -->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
+                            <button onclick="revenueBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                        <path d="M20 20H4V4"/>
+                                        <path d="m4 7l8 8l3-3l4.5 4.5"/>
+                                    </g>
+                                </svg>
+                                <h6 class="mt-3 ms-4">Revenue and Expense Reports</h6>
+                            </button>
+                        </div>
 
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
+                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M11.25 2a.75.75 0 0 1 .75-.75c5.937 0 10.75 4.813 10.75 10.75S17.937 22.75 12 22.75S1.25 17.937 1.25 12a10.72 10.72 0 0 1 3.225-7.677a.75.75 0 1 1 1.05 1.071A9.22 9.22 0 0 0 2.75 12A9.25 9.25 0 1 0 12 2.75a.75.75 0 0 1-.75-.75"/><path fill="currentColor" d="M11.25 5a.75.75 0 0 1 .75-.75A7.75 7.75 0 1 1 4.25 12a.75.75 0 0 1 1.5 0A6.25 6.25 0 1 0 12 5.75a.75.75 0 0 1-.75-.75"/><path fill="currentColor" d="M12 7.25a.75.75 0 0 0 0 1.5a3.25 3.25 0 0 1 0 6.5a.75.75 0 0 0 0 1.5a4.75 4.75 0 1 0 0-9.5"/></svg>
+                                <h6 class="mt-3 ms-4">Outstanding Receivables</h6>
+                            </button>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
+                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="m16 11.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg>
+                                <h6 class="mt-3 ms-4">Profit & Loss Statement</h6>
+                            </button>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
+                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 256"><path fill="currentColor" d="M200 152a35.8 35.8 0 0 0-16.46 4l-21.39-16.64a35.5 35.5 0 0 0 1.85-10.71l10.35-3.44A36 36 0 1 0 164 100c0 1.11.06 2.21.16 3.3l-7.78 2.59A36 36 0 0 0 128 92c-1 0-1.88 0-2.81.12l-4.45-10A36 36 0 1 0 96 92c1 0 1.88 0 2.81-.12l4.45 10a35.91 35.91 0 0 0-8.59 39.7l-21.28 18.91a36 36 0 1 0 15.94 17.93l21.28-18.91a35.91 35.91 0 0 0 36.8-1.21L167 173.56A36 36 0 1 0 200 152m0-64a12 12 0 1 1-12 12a12 12 0 0 1 12-12M84 56a12 12 0 1 1 12 12a12 12 0 0 1-12-12M56 204a12 12 0 1 1 12-12a12 12 0 0 1-12 12m60-76a12 12 0 1 1 12 12a12 12 0 0 1-12-12m84 72a12 12 0 1 1 12-12a12 12 0 0 1-12 12"/></svg>
+                                <h6 class="mt-3 ms-4">Branch-wise Financials</h6>
+                            </button>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
+                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.48 10.533a1.141 1.141 0 1 0 0-2.283a1.141 1.141 0 0 0 0 2.283m-2.055 2.946a2.06 2.06 0 0 1 .267-.993a2.08 2.08 0 0 1 1.788-1.045a2.08 2.08 0 0 1 1.787 1.045c.172.303.263.645.267.993m4.991-2.946a1.141 1.141 0 1 0 0-2.283a1.141 1.141 0 0 0 0 2.283M8.47 13.479a2.06 2.06 0 0 1 .267-.993a2.08 2.08 0 0 1 1.787-1.045a2.06 2.06 0 0 1 2.055 2.037m-5.58-9.431a1.065 1.065 0 1 0 0-2.13a1.065 1.065 0 0 0 0 2.13M5.008 6.718c.003-.337.092-.668.258-.962A2.01 2.01 0 0 1 7 4.743c.71.001 1.383.394 1.733 1.013c.166.294.255.625.259.962"/><path d="M11.782.545H2.218a.72.72 0 0 0-.718.718V6c0 .397.322.718.718.718h9.564A.72.72 0 0 0 12.5 6V1.263a.72.72 0 0 0-.718-.718"/></g></svg>
+                                <h6 class="mt-3 ms-4">Utilization Reports of Offices & Meeting Rooms</h6>
+                            </button>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
+                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M18 11c1.49 0 2.87.47 4 1.26V8c0-1.11-.89-2-2-2h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h7.68A6.995 6.995 0 0 1 18 11m-8-7h4v2h-4z"/><path fill="currentColor" d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5m1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85z"/></svg>
+                                <h6 class="mt-3 ms-4">Maintenance History</h6>
+                            </button>
+                        </div>
+
+                        <!-- Revenue and Expense Reports -->
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing revenue-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <div>
+                                        <h5 class="abel-regular">Revenue and Expense Reports</h5>
+                                    </div>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content">
+                                    <div id="s-col">
+                                        <!-- Graph content will go here (using a graph library like Chart.js) -->
+                                        <canvas id="revenueExpenseChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing revenue-card">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Month</th>
+                                            <th class="text-center" scope="col">Revenue</th>
+                                            <th class="text-center" scope="col">Expense</th>
+                                            <th class="text-center" scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>January</td>
+                                            <td class="text-center">$1000</td>
+                                            <td class="text-center">$800</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-success">Approved</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>February</td>
+                                            <td class="text-center">$1200</td>
+                                            <td class="text-center">$900</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-secondary">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>March</td>
+                                            <td class="text-center">$1500</td>
+                                            <td class="text-center">$1000</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-success">Approved</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>April</td>
+                                            <td class="text-center">$1700</td>
+                                            <td class="text-center">$1100</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-info">In Progress</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>May</td>
+                                            <td class="text-center">$1800</td>
+                                            <td class="text-center">$1200</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-danger">Rejected</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>June</td>
+                                            <td class="text-center">$2000</td>
+                                            <td class="text-center">$1500</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-success">Approved</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td class="text-center">$2200</td>
+                                            <td class="text-center">$1300</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-secondary">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>August</td>
+                                            <td class="text-center">$2400</td>
+                                            <td class="text-center">$1400</td>
+                                            <td class="text-center">
+                                                <span class="badge badge-light-info">In Progress</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                            
+                        </div>
+                        
                     </div>
 
                 </div>
@@ -946,73 +1104,107 @@
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
     <script>
-        // graph code 
-        var sLineArea = {
-            chart: {
-                height: 350,
-                type: 'area',
-                toolbar: { show: false }
-            },
-            dataLabels: { enabled: false },
-            stroke: { curve: 'smooth' },
-            series: [
-                { name: 'series1', data: [31, 40, 28, 51, 42, 109, 100] },
-                { name: 'series2', data: [11, 32, 45, 32, 34, 52, 41] }
-            ],
-            xaxis: {
-                type: 'datetime',
-                categories: [
-                    "2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", 
-                    "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"
-                ]
-            },
-            tooltip: { x: { format: 'dd/MM/yy HH:mm' } }
-        };
-
-        // Render Chart
-        var chart = new ApexCharts(document.querySelector("#expense_detailss"), sLineArea);
-        chart.render();
-
         // graph code 2
-        var sline = {
+        var options = {
         chart: {
             height: 350,
             type: 'line',
-            zoom: {
-            enabled: false
-            },
             toolbar: {
             show: false,
             }
         },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            curve: 'straight'
-        },
         series: [{
-            name: "Desktops",
-            data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+            name: 'Fixed Expenses',
+            type: 'column',
+            data: [1200, 1100, 1150, 1300, 1250, 1400, 1350, 1200, 1100, 1300, 1250, 1400]
+        }, {
+            name: 'Variable Expenses',
+            type: 'line',
+            data: [300, 450, 400, 350, 500, 450, 300, 400, 380, 420, 410, 460]
         }],
+        stroke: {
+            width: [0, 4]
+        },
         title: {
-            text: 'Product Trends by Month',
-            align: 'left'
+            text: 'Expenses Overview'
         },
-        grid: {
-            row: {
-            colors: ['#f1f2f3', 'transparent'], // takes an array which will be repeated on columns
-            opacity: 0.5
-            },
-        },
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-        }
+            type: 'category'
+        },
+        yaxis: [{
+            title: {
+            text: 'Fixed Expenses',
+            },
+        }, {
+            opposite: true,
+            title: {
+            text: 'Variable Expenses'
+            }
+        }]
         }
 
         var chart = new ApexCharts(
-        document.querySelector("#s-line"),
-        sline
+        document.querySelector("#mixed-chart"),
+        options
+        );
+
+        chart.render();
+
+        // Revenue and Expense Reports
+        var sCol = {
+            chart: {
+                height: 350,
+                type: 'bar',
+                toolbar: {
+                    show: false,
+                }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'  
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            series: [{
+                name: 'Net Profit',
+                data: [44, 55, 57, 56, 61, 58, 63, 60, 66]  // Example Net Profit data per month (Feb to Oct)
+            }, {
+                name: 'Revenue',
+                data: [76, 85, 101, 98, 87, 105, 91, 114, 94]  // Example Revenue data per month (Feb to Oct)
+            }],
+            xaxis: {
+                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'], // Months for x-axis
+            },
+            yaxis: {
+                title: {
+                    text: '$ (thousands)'  // Y-axis label
+                }
+            },
+            fill: {
+                opacity: 1
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val + " thousands";  // Custom tooltip for showing thousands
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(
+            document.querySelector("#s-col"),
+            sCol
         );
 
         chart.render();
