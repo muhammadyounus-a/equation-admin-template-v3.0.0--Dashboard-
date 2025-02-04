@@ -923,14 +923,14 @@
                         </div>
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
-                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                            <button onclick="outStandingBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M11.25 2a.75.75 0 0 1 .75-.75c5.937 0 10.75 4.813 10.75 10.75S17.937 22.75 12 22.75S1.25 17.937 1.25 12a10.72 10.72 0 0 1 3.225-7.677a.75.75 0 1 1 1.05 1.071A9.22 9.22 0 0 0 2.75 12A9.25 9.25 0 1 0 12 2.75a.75.75 0 0 1-.75-.75"/><path fill="currentColor" d="M11.25 5a.75.75 0 0 1 .75-.75A7.75 7.75 0 1 1 4.25 12a.75.75 0 0 1 1.5 0A6.25 6.25 0 1 0 12 5.75a.75.75 0 0 1-.75-.75"/><path fill="currentColor" d="M12 7.25a.75.75 0 0 0 0 1.5a3.25 3.25 0 0 1 0 6.5a.75.75 0 0 0 0 1.5a4.75 4.75 0 1 0 0-9.5"/></svg>
                                 <h6 class="mt-3 ms-4">Outstanding Receivables</h6>
                             </button>
                         </div>
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
-                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                            <button onclick="profitLossBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="m16 11.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg>
                                 <h6 class="mt-3 ms-4">Profit & Loss Statement</h6>
                             </button>
@@ -981,7 +981,6 @@
                                 </div>
                                 <div class="widget-content">
                                     <div id="s-col">
-                                        <!-- Graph content will go here (using a graph library like Chart.js) -->
                                         <canvas id="revenueExpenseChart"></canvas>
                                     </div>
                                 </div>
@@ -1067,6 +1066,141 @@
                                 </table>
                             </div>                            
                         </div>
+
+                        <!-- outStanding code -->
+                        
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing outStanding-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <div>
+                                        <h5 class="abel-regular">Revenue and Expense Reports</h5>
+                                    </div>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content">
+                                    <div id="outstanding-receivables"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing outStanding-card">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Month</th>
+                                            <th scope="col">Outstanding Receivables ($K)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>January</td>
+                                            <td>$120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>February</td>
+                                            <td>$135</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March</td>
+                                            <td>$150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>April</td>
+                                            <td>$170</td>
+                                        </tr>
+                                        <tr>
+                                            <td>May</td>
+                                            <td>$160</td>
+                                        </tr>
+                                        <tr>
+                                            <td>June</td>
+                                            <td>$180</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>$190</td>
+                                        </tr>
+                                        <tr>
+                                            <td>August</td>
+                                            <td>$210</td>
+                                        </tr>
+                                        <tr>
+                                            <td>September</td>
+                                            <td>$220</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                                              
+                        
+                        <!-- profit-loss code -->
+                        
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing profit-loss-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <div>
+                                        <h5 class="abel-regular">Revenue and Expense Reports</h5>
+                                    </div>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content">
+                                    <div id="profit-loss"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing profit-loss-card">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Month</th>
+                                            <th scope="col">Revenue ($K)</th>
+                                            <th scope="col">Expenses ($K)</th>
+                                            <th scope="col">Net Profit ($K)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>January</td><td>$120</td><td>$80</td><td>$40</td></tr>
+                                        <tr><td>February</td><td>$135</td><td>$90</td><td>$45</td></tr>
+                                        <tr><td>March</td><td>$150</td><td>$100</td><td>$50</td></tr>
+                                        <tr><td>April</td><td>$170</td><td>$110</td><td>$60</td></tr>
+                                        <tr><td>May</td><td>$160</td><td>$105</td><td>$55</td></tr>
+                                        <tr><td>June</td><td>$180</td><td>$120</td><td>$60</td></tr>
+                                        <tr><td>July</td><td>$190</td><td>$130</td><td>$60</td></tr>
+                                        <tr><td>August</td><td>$210</td><td>$140</td><td>$70</td></tr>
+                                        <tr><td>September</td><td>$220</td><td>$150</td><td>$70</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                        
                         
                     </div>
 
@@ -1208,6 +1342,113 @@
         );
 
         chart.render();
+
+        // outStanding code 
+
+        var outstandingReceivablesChart = {
+            chart: {
+                height: 350,
+                type: 'bar',
+                toolbar: {
+                    show: false,
+                }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '50%',
+                    endingShape: 'rounded'
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            series: [{
+                name: 'Outstanding Receivables',
+                data: [120, 135, 150, 170, 160, 180, 190, 210, 220] // Sample Data
+            }],
+            xaxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            },
+            yaxis: {
+                title: {
+                    text: 'Amount ($K)'
+                }
+            },
+            fill: {
+                opacity: 1
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val + "K";
+                    }
+                }
+            }
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#outstanding-receivables"),
+            outstandingReceivablesChart
+        );
+
+        chart.render();
+
+        // profitLoss code 
+
+        var profitLossChart = {
+            chart: {
+                height: 350,
+                type: 'bar',
+                toolbar: { show: false }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '50%',
+                    endingShape: 'rounded'
+                },
+            },
+            dataLabels: { enabled: false },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            series: [{
+                name: 'Revenue',
+                data: [120, 135, 150, 170, 160, 180, 190, 210, 220] // Sample Revenue Data
+            }, {
+                name: 'Expenses',
+                data: [80, 90, 100, 110, 105, 120, 130, 140, 150] // Sample Expense Data
+            }, {
+                name: 'Net Profit',
+                data: [40, 45, 50, 60, 55, 60, 60, 70, 70] // Revenue - Expenses
+            }],
+            xaxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            },
+            yaxis: {
+                title: { text: 'Amount ($K)' }
+            },
+            fill: { opacity: 1 },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val + "K";
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#profit-loss"), profitLossChart);
+        chart.render();
+
     </script>
 
 </body>

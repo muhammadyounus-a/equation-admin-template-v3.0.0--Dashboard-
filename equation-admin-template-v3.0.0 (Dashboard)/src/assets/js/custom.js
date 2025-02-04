@@ -123,6 +123,19 @@ function quickBtn() {
     });
 }
 
+// backBtn1
+
+function backBtn1() {
+    let showCards = document.querySelectorAll(".show-card-2, .revenue-card, .outStanding-card, .profit-loss-card");
+    let quickCard = document.querySelectorAll(".quick-card, .show-card-1");
+    showCards.forEach(card => {
+        card.style.display = "none";
+    });
+    quickCard.forEach(card => {
+        card.style.display = "flex";
+    });
+}
+
 // revenue code
 function revenueBtn() {
     let showCards = document.querySelectorAll(".revenue-card, .show-card-1, .show-card-2");
@@ -144,13 +157,44 @@ function revenueBtn() {
     });
 }
 
-function backBtn1() {
-    let showCards = document.querySelectorAll(".show-card-2, .revenue-card");
-    let quickCard = document.querySelectorAll(".quick-card, .show-card-1");
+// outStanding code
+function outStandingBtn() {
+    let showCards = document.querySelectorAll(".outStanding-card, .show-card-1, .show-card-2");
+
     showCards.forEach(card => {
-        card.style.display = "none";
+        if (card.classList.contains("show-card-1")) {
+            card.style.display = "none";
+        } else if (card.classList.contains("show-card-2")) {
+            card.style.display = "block";
+            card.style.display = "flex";
+        } else {
+            card.style.display = "block";
+        }
     });
+
+    let quickCard = document.querySelectorAll(".quick-card");
     quickCard.forEach(card => {
-        card.style.display = "flex";
+        card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
+    });
+}
+
+// profit-loss-card code
+function profitLossBtn() {
+    let showCards = document.querySelectorAll(".profit-loss-card, .show-card-1, .show-card-2");
+
+    showCards.forEach(card => {
+        if (card.classList.contains("show-card-1")) {
+            card.style.display = "none";
+        } else if (card.classList.contains("show-card-2")) {
+            card.style.display = "block";
+            card.style.display = "flex";
+        } else {
+            card.style.display = "block";
+        }
+    });
+
+    let quickCard = document.querySelectorAll(".quick-card");
+    quickCard.forEach(card => {
+        card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
     });
 }
