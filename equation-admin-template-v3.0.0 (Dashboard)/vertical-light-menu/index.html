@@ -937,7 +937,7 @@
                         </div>
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
-                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                            <button onclick="branchBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 256"><path fill="currentColor" d="M200 152a35.8 35.8 0 0 0-16.46 4l-21.39-16.64a35.5 35.5 0 0 0 1.85-10.71l10.35-3.44A36 36 0 1 0 164 100c0 1.11.06 2.21.16 3.3l-7.78 2.59A36 36 0 0 0 128 92c-1 0-1.88 0-2.81.12l-4.45-10A36 36 0 1 0 96 92c1 0 1.88 0 2.81-.12l4.45 10a35.91 35.91 0 0 0-8.59 39.7l-21.28 18.91a36 36 0 1 0 15.94 17.93l21.28-18.91a35.91 35.91 0 0 0 36.8-1.21L167 173.56A36 36 0 1 0 200 152m0-64a12 12 0 1 1-12 12a12 12 0 0 1 12-12M84 56a12 12 0 1 1 12 12a12 12 0 0 1-12-12M56 204a12 12 0 1 1 12-12a12 12 0 0 1-12 12m60-76a12 12 0 1 1 12 12a12 12 0 0 1-12-12m84 72a12 12 0 1 1 12-12a12 12 0 0 1-12 12"/></svg>
                                 <h6 class="mt-3 ms-4">Branch-wise Financials</h6>
                             </button>
@@ -1095,7 +1095,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing outStanding-card">
                             <div class="table-responsive">
                                 <table class="table table-bordered">
@@ -1175,7 +1174,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing profit-loss-card">
                             <div class="table-responsive">
                                 <table class="table table-bordered">
@@ -1202,6 +1200,56 @@
                             </div>
                         </div>                        
                         
+                        <!-- branch-card code -->
+
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing branch-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <div>
+                                        <h5 class="abel-regular">Revenue and Expense Reports</h5>
+                                    </div>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content">
+                                    <div id="branch-financials"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing branch-card">
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-center">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">Branch</th>
+                                            <th scope="col">Revenue ($K)</th>
+                                            <th scope="col">Expenses ($K)</th>
+                                            <th scope="col">Net Profit ($K)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Branch A</td><td>$200</td><td>$150</td><td>$50</td></tr>
+                                        <tr><td>Branch B</td><td>$180</td><td>$130</td><td>$50</td></tr>
+                                        <tr><td>Branch C</td><td>$190</td><td>$140</td><td>$50</td></tr>
+                                        <tr><td>Branch D</td><td>$210</td><td>$160</td><td>$50</td></tr>
+                                        <tr><td>Branch E</td><td>$230</td><td>$180</td><td>$50</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                        
+
                     </div>
 
                 </div>
@@ -1448,6 +1496,64 @@
 
         var chart = new ApexCharts(document.querySelector("#profit-loss"), profitLossChart);
         chart.render();
+
+        // branch-financials code
+
+        var branchFinancialsChart = {
+            chart: {
+                height: 350,
+                type: 'bar',
+                stacked: true, // Enables stacked bars
+                toolbar: { show: false }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    dataLabels: { position: 'top' } // Positions labels at the top of bars
+                },
+            },
+            dataLabels: { enabled: false },
+            stroke: {
+                show: true,
+                width: 1,
+                colors: ['#fff']
+            },
+            series: [{
+                name: 'Revenue',
+                data: [200, 180, 190, 210, 230] // Sample Revenue Data per Branch
+            }, {
+                name: 'Expenses',
+                data: [150, 130, 140, 160, 180] // Sample Expense Data per Branch
+            }, {
+                name: 'Net Profit',
+                data: [50, 50, 50, 50, 50] // Revenue - Expenses
+            }],
+            xaxis: {
+                categories: ['Branch A', 'Branch B', 'Branch C', 'Branch D', 'Branch E'],
+                labels: { rotate: -45 } // Rotates labels for better readability
+            },
+            yaxis: {
+                title: { text: 'Amount ($K)' }
+            },
+            fill: { opacity: 1 },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val + "K";
+                    }
+                }
+            },
+            legend: {
+                position: 'top', // Moves legend to the top
+                horizontalAlign: 'center'
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#branch-financials"), branchFinancialsChart);
+        chart.render();
+
+        
 
     </script>
 
