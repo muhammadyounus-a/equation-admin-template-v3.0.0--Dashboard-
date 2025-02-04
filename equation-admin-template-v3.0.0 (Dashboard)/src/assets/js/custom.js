@@ -126,7 +126,7 @@ function quickBtn() {
 // backBtn1
 
 function backBtn1() {
-    let showCards = document.querySelectorAll(".show-card-2, .revenue-card, .outStanding-card, .profit-loss-card, .branch-card");
+    let showCards = document.querySelectorAll(".show-card-2, .revenue-card, .outStanding-card, .profit-loss-card, .branch-card, .utilization-card");
     let quickCard = document.querySelectorAll(".quick-card, .show-card-1");
     showCards.forEach(card => {
         card.style.display = "none";
@@ -202,6 +202,27 @@ function profitLossBtn() {
 // branch-financials code
 function branchBtn() {
     let showCards = document.querySelectorAll(".branch-card, .show-card-1, .show-card-2");
+
+    showCards.forEach(card => {
+        if (card.classList.contains("show-card-1")) {
+            card.style.display = "none";
+        } else if (card.classList.contains("show-card-2")) {
+            card.style.display = "block";
+            card.style.display = "flex";
+        } else {
+            card.style.display = "block";
+        }
+    });
+
+    let quickCard = document.querySelectorAll(".quick-card");
+    quickCard.forEach(card => {
+        card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
+    });
+}
+
+// utilization code
+function utilizationBtn() {
+    let showCards = document.querySelectorAll(".utilization-card, .show-card-1, .show-card-2");
 
     showCards.forEach(card => {
         if (card.classList.contains("show-card-1")) {

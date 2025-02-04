@@ -944,7 +944,7 @@
                         </div>
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 quick-card">
-                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                            <button onclick="utilizationBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.48 10.533a1.141 1.141 0 1 0 0-2.283a1.141 1.141 0 0 0 0 2.283m-2.055 2.946a2.06 2.06 0 0 1 .267-.993a2.08 2.08 0 0 1 1.788-1.045a2.08 2.08 0 0 1 1.787 1.045c.172.303.263.645.267.993m4.991-2.946a1.141 1.141 0 1 0 0-2.283a1.141 1.141 0 0 0 0 2.283M8.47 13.479a2.06 2.06 0 0 1 .267-.993a2.08 2.08 0 0 1 1.787-1.045a2.06 2.06 0 0 1 2.055 2.037m-5.58-9.431a1.065 1.065 0 1 0 0-2.13a1.065 1.065 0 0 0 0 2.13M5.008 6.718c.003-.337.092-.668.258-.962A2.01 2.01 0 0 1 7 4.743c.71.001 1.383.394 1.733 1.013c.166.294.255.625.259.962"/><path d="M11.782.545H2.218a.72.72 0 0 0-.718.718V6c0 .397.322.718.718.718h9.564A.72.72 0 0 0 12.5 6V1.263a.72.72 0 0 0-.718-.718"/></g></svg>
                                 <h6 class="mt-3 ms-4">Utilization Reports of Offices & Meeting Rooms</h6>
                             </button>
@@ -1248,8 +1248,57 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>                        
+                        </div>     
+                        
+                        <!-- utilization-report -->
 
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing utilization-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <div>
+                                        <h5 class="abel-regular">Revenue and Expense Reports</h5>
+                                    </div>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content">
+                                    <div id="utilization-report"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing utilization-card">
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-center">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">Office/Meeting Room</th>
+                                            <th scope="col">Office Utilization (%)</th>
+                                            <th scope="col">Meeting Room Utilization (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Office A</td><td>75%</td><td>60%</td></tr>
+                                        <tr><td>Office B</td><td>80%</td><td>65%</td></tr>
+                                        <tr><td>Office C</td><td>68%</td><td>55%</td></tr>
+                                        <tr><td>Office D</td><td>85%</td><td>70%</td></tr>
+                                        <tr><td>Office E</td><td>90%</td><td>75%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
                     </div>
 
                 </div>
@@ -1553,7 +1602,56 @@
         var chart = new ApexCharts(document.querySelector("#branch-financials"), branchFinancialsChart);
         chart.render();
 
-        
+        // utilization-report code
+
+        var utilizationChart = {
+            chart: {
+                height: 350,
+                type: 'bar',
+                stacked: true, // Stacked bars for better visualization
+                toolbar: { show: false }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '50%'
+                }
+            },
+            dataLabels: { enabled: false },
+            stroke: {
+                show: true,
+                width: 1,
+                colors: ['#fff']
+            },
+            series: [{
+                name: 'Office Utilization (%)',
+                data: [75, 80, 68, 85, 90] // Sample data
+            }, {
+                name: 'Meeting Room Utilization (%)',
+                data: [60, 65, 55, 70, 75] // Sample data
+            }],
+            xaxis: {
+                categories: ['Office A', 'Office B', 'Office C', 'Office D', 'Office E'],
+            },
+            yaxis: {
+                title: { text: 'Utilization (%)' }
+            },
+            fill: { opacity: 1 },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val + "%";
+                    }
+                }
+            },
+            legend: {
+                position: 'top',
+                horizontalAlign: 'center'
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#utilization-report"), utilizationChart);
+        chart.render();
 
     </script>
 
