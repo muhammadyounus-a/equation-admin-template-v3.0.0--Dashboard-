@@ -40,7 +40,7 @@ function occupancyBtn() {
 
 // back button code
 function backBtn() {
-    let showCards = document.querySelectorAll(".show-card, .occupancy-card, .income-card, .enquiry-card, .show-card-1,.expenses-card, .quick-card, .revenue-card");
+    let showCards = document.querySelectorAll(".show-card, .occupancy-card, .income-card, .enquiry-card, .show-card-1,.expenses-card, .quick-card, .revenue-card, .converted-card");
     let mainCard = document.querySelectorAll(".main-card-items");
     showCards.forEach(card => {
         if (card.style.display === "none" || card.style.display === "") {
@@ -58,7 +58,7 @@ function backBtn() {
 
 // enquiryy page script
 function enquiryyBtn() {
-    let showCards = document.querySelectorAll(".enquiry-card,.show-card, .show-card-1");
+    let showCards = document.querySelectorAll(".enquiry-card,.converted-card, .show-card-1");
     showCards.forEach(card => {
         if (card.style.display === "none" || card.style.display === "") {
             card.style.display = "block"; // Show all show cards
