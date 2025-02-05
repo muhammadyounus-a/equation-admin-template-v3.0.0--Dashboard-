@@ -27,6 +27,8 @@
     <link href="../src/assets/css/light/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <!-- font icon link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -283,7 +285,7 @@
                             <button class="property-btn mt-2"><i class="fa-solid fa-shop"></i> Doha Souq</button>
                         </div>
                         <div class="input-class mt-2">
-                            <input type="date" id="date" name="date" class="form-control">
+                            <input type="date" id="rangeCalendarFlatpickr" placeholder="Select Date..." name="date" class="form-control">
                         </div>
                     </div>
                 
@@ -303,7 +305,7 @@
                             <button class="property-btn mt-2"><i class="fa-solid fa-shop"></i> Doha Souq</button>
                         </div>
                         <div class="input-class mt-2">
-                            <input type="date" id="date" name="date" class="form-control">
+                            <input type="date" id="rangeCalendarFlatpickr" placeholder="Select Date..." name="date" class="form-control">
                         </div>
                     </div>
                     <div class="row layout-top-spacing">
@@ -472,6 +474,7 @@
                             </button>
                         </div>
 
+                        <!-- Occupancy Overview -->
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing occupancy-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
@@ -492,7 +495,7 @@
                                     </div>
                                 </div>
 
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="uniqueVisits"></div>
                                 </div>
                             </div>
@@ -518,7 +521,7 @@
                                     </div>
                                 </div>
 
-                                <div class="widget-content">
+                                <div class="widget-content  px-4">
                                     <div id="enquiry_overview"></div>
                                 </div>
                             </div>
@@ -676,7 +679,7 @@
                                     </div>
                                 </div>
 
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="expense_details"></div>
                                 </div>
                             </div>
@@ -1023,7 +1026,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="s-col">
                                         <canvas id="revenueExpenseChart"></canvas>
                                     </div>
@@ -1104,7 +1107,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="outstanding-receivables"></div>
                                 </div>
                             </div>
@@ -1184,7 +1187,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="profit-loss"></div>
                                 </div>
                             </div>
@@ -1238,7 +1241,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="branch-financials"></div>
                                 </div>
                             </div>
@@ -1288,7 +1291,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="utilization-report"></div>
                                 </div>
                             </div>
@@ -1337,7 +1340,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-content">
+                                <div class="widget-content px-4">
                                     <div id="maintenance-chart"></div>
                                 </div>
                             </div>
@@ -1389,6 +1392,13 @@
 
     </div>
     <!-- END MAIN CONTAINER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        var f3 = flatpickr(document.getElementById('rangeCalendarFlatpickr'), {
+            mode: "range"
+        });
+    </script>
 
     <!-- jQuery and DataTables JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
