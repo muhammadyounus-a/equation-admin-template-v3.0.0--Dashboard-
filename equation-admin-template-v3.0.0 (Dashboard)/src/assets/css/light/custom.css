@@ -134,3 +134,74 @@ label {
 .visible {
     display: flex;
 }
+
+.icon-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.property-btn {
+    padding: 5px 20px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #e0e6ed;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    z-index: 1; /* Ensure text is on top */
+}
+
+.property-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: linear-gradient(to left, #0acffe -80%, #0339d1 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1; /* Ensures the gradient stays behind the text */
+}
+
+.property-btn:hover::before {
+    opacity: 1;
+}
+
+.property-btn:hover {
+    color: white; /* Changes text color to white */
+    border-color: transparent; /* Removes border on hover */
+    background-color: transparent; /* Keeps background transparent */
+    transform: translateY(-3px); /* Moves the button up slightly */
+}
+
+.btn-class {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-class {
+    background-color: #fafafa;
+    padding: 5px 10px;
+}
+
+.show-card-1,.show-card-2{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1378px) {
+    .input-class {
+        margin-top: 20px;
+    }
+}
