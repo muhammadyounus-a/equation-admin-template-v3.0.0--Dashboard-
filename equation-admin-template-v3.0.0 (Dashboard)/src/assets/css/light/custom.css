@@ -200,6 +200,14 @@ label {
     flex-wrap: wrap;
 }
 
+.summary-count {
+    font-size: 14px !important;
+}
+
+.w-icon svg {
+    font-size: 30px !important;
+}
+
 @media (max-width: 1378px) {
     .input-class {
         margin-top: 20px;
