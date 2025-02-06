@@ -142,21 +142,57 @@ label {
     cursor: pointer;
 }
 
+.btn-class {
+    display: flex;
+}
+
+.input-class {
+    background-color: #fafafa;
+    padding: 5px 10px;
+}
+
+.show-card-1,.show-card-2{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.summary-count {
+    font-size: 14px !important;
+}
+
+.w-icon svg {
+    font-size: 30px !important;
+}
+
+.input-class input {
+    width: 300px;
+}
+
+.backBtn {
+    background-color: #fafafa;
+    padding: 5px 20px 5px 10px;
+}
+
+.propertyBtns {
+    display: flex;
+}
+
 .property-btn {
-    padding: 5px 20px;
+    padding: 10px 20px;
     margin-left: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 10px;
     position: relative;
     background: #fff;
     border: 1px solid #e0e6ed;
-    overflow: hidden;
     transition: 0.3s ease-in-out;
     z-index: 1; /* Ensure text is on top */
+    white-space: nowrap;  /* Prevent text from wrapping */
 }
 
 .property-btn::before {
@@ -184,32 +220,38 @@ label {
     transform: translateY(-3px); /* Moves the button up slightly */
 }
 
-.btn-class {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.input-class {
-    background-color: #fafafa;
-    padding: 5px 10px;
-}
-
-.show-card-1,.show-card-2{
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.summary-count {
-    font-size: 14px !important;
-}
-
-.w-icon svg {
-    font-size: 30px !important;
-}
-
-@media (max-width: 1378px) {
+@media (max-width: 1528px) {
     .input-class {
         margin-top: 20px;
+    }
+    .input-class {
+        width: 100% !important;
+    }
+    .input-class input {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1210px) {
+    .backBtn {
+        width: 10%;
+    }
+
+    .propertyBtns {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 90%;
+        white-space: nowrap;
+        flex-wrap: wrap;
+    }
+
+    .propertyBtns::-webkit-scrollbar {
+        display: none;
+    }
+
+    .property-btn {
+        width: 110px;
+        margin: 5px;
     }
 }
