@@ -183,25 +183,41 @@ label {
     padding: 5px 20px 5px 10px;
 }
 
+.MainpropertyBtns {
+    display: flex;
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    width: 100%; /* Ensures container takes full width */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.MainpropertyBtns::-webkit-scrollbar {
+    display: none;
+}
+
 .propertyBtns {
     display: flex;
+    flex-wrap: nowrap !important;
+    gap: 10px; /* Adds spacing between buttons */
+    width: max-content; /* Ensures it only takes as much space as needed */
 }
 
 .property-btn {
     padding: 10px 20px;
-    margin-left: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    position: relative;
     background: #fff;
     border: 1px solid #e0e6ed;
     transition: 0.3s ease-in-out;
-    z-index: 1; /* Ensure text is on top */
-    white-space: nowrap;  /* Prevent text from wrapping */
+    white-space: nowrap; /* Prevents text from wrapping */
+    flex-shrink: 0; /* Ensures buttons don’t shrink */
 }
 
 .property-btn::before {
@@ -243,30 +259,35 @@ label {
 
 @media (max-width: 1210px) {
     .backBtn {
-        width: 10%;
+        padding: 5px 20px 5px 10px;
     }
-
-    .propertyBtns {
+    .MainpropertyBtns {
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 90%;
+        overflow-x: auto;  /* Enable horizontal scrolling */
+        overflow-y: hidden;
         white-space: nowrap;
-        flex-wrap: wrap;
-    }
-
-    .propertyBtns::-webkit-scrollbar {
-        display: none;
-    }
-
-    .property-btn {
-        width: 110px;
-        margin: 5px;
+        -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        width: 100% !important; /* Ensures container takes full width */
     }
 }
 
 @media (max-width: 768px) {
     .phone-screen {
         display: block;
+    }
+
+    .btn-class {
+        overflow-x: hidden;
+    }
+
+    .MainpropertyBtns {
+        display: flex;
+        overflow-x: auto;  /* Enable horizontal scrolling */
+        overflow-y: hidden;
+        white-space: nowrap;
+        -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        width: 100% !important; /* Ensures container takes full width */
     }
 }
