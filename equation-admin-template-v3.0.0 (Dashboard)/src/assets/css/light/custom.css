@@ -8,6 +8,11 @@
 .navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .notification-scroll {
     height: auto !important;
 }
+
+body {
+    font-family: "Abel", sans-serif;
+}
+
 .wd-aut{
     width: 50% !important;
 }
@@ -119,7 +124,11 @@ label {
     margin-bottom: 20px;
 }
 
-.show-card, .show-card-1, .converted-card, .show-card-2, .enquiry-card,.occupancy-card,.income-card,.expenses-card,.quick-card,.revenue-card,.expenses-card,.outStanding-card, .profit-loss-card,.branch-card, .utilization-card, .maintenance-card {
+.phone-screen {
+    display: none;
+}
+
+.show-card, .otherOverview-card,.graphVisuals-card, .show-card-1, .converted-card, .show-card-2, .enquiry-card,.occupancy-card,.income-card,.expenses-card,.quick-card,.revenue-card,.expenses-card,.outStanding-card, .profit-loss-card,.branch-card, .utilization-card, .maintenance-card {
     display: none;
 }
 
@@ -253,5 +262,11 @@ label {
     .property-btn {
         width: 110px;
         margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .phone-screen {
+        display: block;
     }
 }

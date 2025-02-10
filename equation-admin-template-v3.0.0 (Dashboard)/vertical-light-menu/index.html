@@ -288,6 +288,7 @@
                             </div>
                         </div>
                         <div class="input-class mt-2">
+                            <label class="phone-screen" for="">Date</label>
                             <input type="date" placeholder="Select Date..." name="date" class="form-control rangeCalendarFlatpickr">
                         </div>
                     </div>
@@ -310,6 +311,7 @@
                             </div>
                         </div>
                         <div class="input-class mt-2">
+                            <label class="phone-screen" for="">Date</label>
                             <input type="date" placeholder="Select Date..." name="date" class="form-control rangeCalendarFlatpickr">
                         </div>
                     </div>
@@ -439,7 +441,7 @@
                             </button>
                         </div>
 
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 main-card-items">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center main-card-items">
                             <button onclick="quickBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <div class="info-box-3">
                                     <div class="info-box-3-icon">
@@ -452,8 +454,8 @@
                             </button>
                         </div>
 
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 main-card-items">
-                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center main-card-items">
+                            <button onclick="otherOverviewBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <div class="info-box-3">
                                     <div class="info-box-3-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M10 16.5H6m2-3H6"/><path d="M14 15c0-.943 0-1.414.293-1.707S15.057 13 16 13s1.414 0 1.707.293S18 14.057 18 15s0 1.414-.293 1.707S16.943 17 16 17s-1.414 0-1.707-.293S14 15.943 14 15Z"/><path stroke-linecap="round" d="M22 12c0-3.771 0-5.657-1.172-6.828S17.771 4 14 4h-4C6.229 4 4.343 4 3.172 5.172S2 8.229 2 12s0 5.657 1.172 6.828S6.229 20 10 20h4c3.771 0 5.657 0 6.828-1.172c.654-.653.943-1.528 1.07-2.828M2 10h5m15 0H11"/></g></svg>
@@ -465,8 +467,8 @@
                             </button>
                         </div>
 
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center mt-4 main-card-items">
-                            <button style="border: 0px;width: 100%;height: auto;background-color: transparent;">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing text-center main-card-items">
+                            <button onclick="graphVisualBtn()" style="border: 0px;width: 100%;height: auto;background-color: transparent;">
                                 <div class="info-box-3">
                                     <div class="info-box-3-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M13.75 10c0 .414.336.75.75.75h.69l-2.013 2.013a.25.25 0 0 1-.354 0l-1.586-1.586a1.75 1.75 0 0 0-2.474 0L6.47 13.47a.75.75 0 1 0 1.06 1.06l2.293-2.293a.25.25 0 0 1 .354 0l1.586 1.586a1.75 1.75 0 0 0 2.474 0l2.013-2.012v.689a.75.75 0 0 0 1.5 0V10a.75.75 0 0 0-.75-.75h-2.5a.75.75 0 0 0-.75.75"/><path fill="currentColor" fill-rule="evenodd" d="M11.943 1.25c-2.309 0-4.118 0-5.53.19c-1.444.194-2.584.6-3.479 1.494c-.895.895-1.3 2.035-1.494 3.48c-.19 1.411-.19 3.22-.19 5.529v.114c0 2.309 0 4.118.19 5.53c.194 1.444.6 2.584 1.494 3.479c.895.895 2.035 1.3 3.48 1.494c1.411.19 3.22.19 5.529.19h.114c2.309 0 4.118 0 5.53-.19c1.444-.194 2.584-.6 3.479-1.494c.895-.895 1.3-2.035 1.494-3.48c.19-1.411.19-3.22.19-5.529v-.114c0-2.309 0-4.118-.19-5.53c-.194-1.444-.6-2.584-1.494-3.479c-.895-.895-2.035-1.3-3.48-1.494c-1.411-.19-3.22-.19-5.529-.19zM3.995 3.995c.57-.57 1.34-.897 2.619-1.069c1.3-.174 3.008-.176 5.386-.176s4.086.002 5.386.176c1.279.172 2.05.5 2.62 1.069c.569.57.896 1.34 1.068 2.619c.174 1.3.176 3.008.176 5.386s-.002 4.086-.176 5.386c-.172 1.279-.5 2.05-1.069 2.62c-.57.569-1.34.896-2.619 1.068c-1.3.174-3.008.176-5.386.176s-4.086-.002-5.386-.176c-1.279-.172-2.05-.5-2.62-1.069c-.569-.57-.896-1.34-1.068-2.619c-.174-1.3-.176-3.008-.176-5.386s.002-4.086.176-5.386c.172-1.279.5-2.05 1.069-2.62" clip-rule="evenodd"/></svg>
@@ -479,14 +481,13 @@
                         </div>
 
                         <!-- Occupancy Overview -->
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing mt-2 occupancy-card">
-                            <h5>Occupancy Overview</h5>
-                        </div>
+                         
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing occupancy-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Occupancy Overview</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown ">
+                                        <div class="dropdown ">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
                                             </a>
@@ -494,7 +495,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
 
@@ -567,15 +568,12 @@
 
                         <!-- Enquiry Overview -->
 
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing mt-2 enquiry-card">
-                            <h5>Enquiry Overview</h5>
-                        </div>
-
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing enquiry-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Enquiry Overview</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown ">
+                                        <div class="dropdown ">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
                                             </a>
@@ -583,7 +581,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
 
@@ -766,14 +764,13 @@
                         </div> 
 
                         <!-- Realisation graph -->
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing income-card mt-2">
-                            <h5>Income Details</h5>
-                        </div>
+
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing income-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Income Details</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown ">
+                                        <div class="dropdown ">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
                                             </a>
@@ -781,7 +778,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
 
@@ -954,16 +951,13 @@
                                 </div>
                             </div>
                         </div> 
-                        
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing mt-2 expenses-card">
-                            <h5>Expense Details</h5>
-                        </div>
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing expenses-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Expense Details</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown">
+                                        <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                                                     <circle cx="12" cy="12" r="1"></circle>
@@ -974,7 +968,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content">
@@ -1147,15 +1141,56 @@
                             </button>
                         </div>
 
-                        <!-- Revenue and Expense Reports -->
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing revenue-card">
-                            <h5>Revenue and Expense Reports</h5>
+                        <!-- Other Overview Cards -->
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing otherOverview-card">
+                            <div style="border-radius: 15px !important;" class="widget widget-t-sales-widget widget-m-customers card-shadow">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <!-- Maintenance Request Icon: Wrench/Tools -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tool">
+                                            <path d="M14.7 14.3l-1.4 1.4m0 0l-4 4a3 3 0 0 1-4.2-4.2l4-4m5.6-5.6a3 3 0 0 1 4.2 4.2l-4 4m-5.6 5.6l-4-4"/>
+                                        </svg>
+                                    </div>
+                                    <div class="media-body abel-regular">
+                                        <p class="widget-text text-muted">Maintenance Requests</p>
+                                        <p class="widget-numeric-value text-dark">5 Active</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex w-bottom abel-regular">
+                                    <p class="widget-total-stats text-warning">2 Pending, 3 In Progress</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing revenue-card">
+                        
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 layout-spacing otherOverview-card">
+                            <div style="border-radius: 15px !important;" class="widget widget-t-sales-widget widget-m-customers card-shadow">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <!-- Pending Payments Icon: Dollar/Cash -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign">
+                                            <line x1="12" y1="1" x2="12" y2="23"/>
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                        </svg>
+                                    </div>
+                                    <div class="media-body abel-regular">
+                                        <p class="widget-text text-muted">Pending Payments</p>
+                                        <p class="widget-numeric-value text-dark">$8,200 Due</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex w-bottom abel-regular">
+                                    <p class="widget-total-stats text-danger">Overdue: $3,500 | Due Soon: $4,700</p>
+                                </div>
+                            </div>
+                        </div>   
+                        
+                        <!-- Graph & Visuals -->
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing graphVisuals-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Lease Renewals - Upcoming Expirations</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown">
+                                        <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                                                     <circle cx="12" cy="12" r="1"></circle>
@@ -1166,7 +1201,105 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content px-4">
+                                    <div id="leaseRenewalsChart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing graphVisuals-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <h5>Client Onboarding Status</h5>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content px-4">
+                                    <div id="clientOnboardingFunnel"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing graphVisuals-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <h5>Maintenance Costs - Monthly Breakdown</h5>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content px-4">
+                                    <div id="maintenanceCostsBarChart"></div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing graphVisuals-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <h5>Revenue Trends - Monthly Income vs Expenses</h5>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content px-4">
+                                    <div id="revenueTrendsLineChart"></div>
+                                </div>
+                            </div>
+                        </div>                      
+
+                        <!-- Revenue and Expense Reports -->
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing revenue-card">
+                            <div class="widget widget-chart-three">
+                                <div class="widget-heading">
+                                    <h5>Revenue and Expense Reports</h5>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="19" cy="12" r="1"></circle>
+                                                    <circle cx="5" cy="12" r="1"></circle>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
+                                                <a class="dropdown-item" href="#">View</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content px-4">
@@ -1228,15 +1361,13 @@
                         </div>                                                
 
                         <!-- outStanding code -->
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing outStanding-card">
-                            <h5>Outstanding Reports</h5>
-                        </div>
                         
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing outStanding-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Outstanding Reports</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown">
+                                        <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                                                     <circle cx="12" cy="12" r="1"></circle>
@@ -1247,7 +1378,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content px-4">
@@ -1310,14 +1441,11 @@
                         <!-- profit-loss code -->
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing profit-loss-card">
-                            <h5>Profit and Loss Reports</h5>
-                        </div>
-                        
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing profit-loss-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Profit and Loss Reports</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown">
+                                        <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                                                     <circle cx="12" cy="12" r="1"></circle>
@@ -1328,7 +1456,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content px-4">
@@ -1365,14 +1493,11 @@
                         <!-- branch-card code -->
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing branch-card">
-                            <h5>Branch-wise Reports</h5>
-                        </div>
-
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing branch-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Branch-wise Reports</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown">
+                                        <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                                                     <circle cx="12" cy="12" r="1"></circle>
@@ -1383,7 +1508,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content px-4">
@@ -1416,14 +1541,11 @@
                         <!-- utilization-report -->
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing utilization-card">
-                            <h5>Utilization Reports Reports</h5>
-                        </div>
-
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing utilization-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Utilization Reports Reports</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown">
+                                        <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                                                     <circle cx="12" cy="12" r="1"></circle>
@@ -1434,7 +1556,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                                 <a class="dropdown-item" href="#">View</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content px-4">
@@ -1466,14 +1588,11 @@
                         <!-- Maintenance History -->
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing maintenance-card">
-                            <h5>Maintenance History</h5>
-                        </div>
-
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing maintenance-card">
                             <div class="widget widget-chart-three">
                                 <div class="widget-heading">
+                                    <h5>Maintenance History</h5>
                                     <div class="task-action">
-                                        <!-- <div class="dropdown">
+                                        <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="maintenanceDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                                                     <circle cx="12" cy="12" r="1"></circle>
@@ -1484,7 +1603,7 @@
                                             <div class="dropdown-menu left" aria-labelledby="maintenanceDropdown">
                                                 <a class="dropdown-item" href="#">View Details</a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content px-4">
@@ -1956,6 +2075,214 @@
             maintenanceChart
         );
 
+        chart.render();
+
+        // graphVisuals graph
+        var leaseRenewalsTimeline = {
+            chart: {
+                height: 350,
+                type: 'area',
+                toolbar: { show: false }
+            },
+            dataLabels: { enabled: false },
+            stroke: { curve: 'smooth' },
+            series: [{
+                name: 'Upcoming Expirations',
+                data: [5, 8, 12, 6, 15, 10, 18]
+            }],
+            xaxis: {
+                type: 'datetime',
+                categories: [
+                    "2025-03-01T00:00:00", "2025-04-01T00:00:00", "2025-05-01T00:00:00", 
+                    "2025-06-01T00:00:00", "2025-07-01T00:00:00", "2025-08-01T00:00:00", "2025-09-01T00:00:00"
+                ]
+            },
+            tooltip: {
+                x: { format: 'dd/MM/yyyy' }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#leaseRenewalsChart"), leaseRenewalsTimeline);
+        chart.render();
+
+        // funnel chart
+        var options = {
+        series: [{
+            data: [60, 45, 30, 20, 10] // Funnel values
+        }],
+        chart: {
+            type: 'bar',
+            height: 350
+        },
+        plotOptions: {
+            bar: {
+                horizontal: true,  // Make it look like a funnel
+                barHeight: '80%',
+                distributed: true,
+            }
+        },
+        colors: ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0'],
+        dataLabels: {
+            enabled: true,
+            formatter: function (val, opts) {
+                return opts.w.globals.labels[opts.dataPointIndex] + ": " + val + "%";
+            },
+            offsetX: 10
+        },
+        xaxis: {
+            categories: [
+                "Initial Contact", 
+                "Proposal Sent", 
+                "Negotiation", 
+                "Agreement Signed", 
+                "Onboarding Complete"
+            ]
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return val + "%";
+                }
+            }
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#clientOnboardingFunnel"), options);
+    chart.render();
+    
+    // bar chart
+    var options = {
+            series: [{
+                name: "Maintenance Costs",
+                data: [1200, 1500, 1100, 1700, 1600, 1800, 1400, 1900, 1750, 1650, 1550, 2000]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350,
+                stacked: true,
+                toolbar: { show: false },
+                zoom: { enabled: true }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '40%',
+                    borderRadius: 8
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                style: {
+                    colors: ['#fff']
+                }
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: [
+                    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                ],
+                labels: {
+                    style: {
+                        colors: '#888',
+                        fontSize: '12px'
+                    }
+                }
+            },
+            yaxis: {
+                title: {
+                    text: "$ (USD)"
+                },
+                labels: {
+                    style: {
+                        colors: '#888',
+                        fontSize: '12px'
+                    }
+                }
+            },
+            fill: {
+                opacity: 0.9,
+                gradient: {
+                    shade: 'light',
+                    type: "vertical",
+                    shadeIntensity: 0.25,
+                    gradientToColors: undefined,
+                    inverseColors: true,
+                    opacityFrom: 0.85,
+                    opacityTo: 0.95,
+                    stops: [50, 100]
+                }
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val;
+                    }
+                }
+            },
+            colors: ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0']
+        };
+
+        var chart = new ApexCharts(document.querySelector("#maintenanceCostsBarChart"), options);
+        chart.render();
+
+        // line graph
+        var options = {
+            series: [
+                {
+                    name: "Income",
+                    data: [5000, 7000, 8000, 7500, 9000, 11000, 10500, 12000, 12500, 13000, 13500, 14000]
+                },
+                {
+                    name: "Expenses",
+                    data: [3000, 4500, 5000, 4700, 5200, 6000, 5900, 6200, 6800, 7000, 7200, 7500]
+                }
+            ],
+            chart: {
+                type: 'line',
+                height: 350,
+                toolbar: { show: false }
+            },
+            stroke: {
+                curve: 'smooth',
+                width: 3
+            },
+            markers: {
+                size: 4,
+                hover: { size: 6 }
+            },
+            xaxis: {
+                categories: [
+                    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                ],
+                labels: {
+                    style: { fontSize: '12px', colors: '#888' }
+                }
+            },
+            yaxis: {
+                title: {
+                    text: "$ (USD)"
+                },
+                labels: {
+                    style: { fontSize: '12px', colors: '#888' }
+                }
+            },
+            tooltip: {
+                shared: true,
+                intersect: false,
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val;
+                    }
+                }
+            },
+            colors: ['#008FFB', '#FF4560']
+        };
+
+        var chart = new ApexCharts(document.querySelector("#revenueTrendsLineChart"), options);
         chart.render();
     </script>
 

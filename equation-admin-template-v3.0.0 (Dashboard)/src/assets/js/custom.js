@@ -40,7 +40,7 @@ function occupancyBtn() {
 
 // back button code
 function backBtn() {
-    let showCards = document.querySelectorAll(".show-card, .occupancy-card, .income-card, .enquiry-card, .show-card-1,.expenses-card, .quick-card, .revenue-card, .converted-card");
+    let showCards = document.querySelectorAll(".show-card, .graphVisuals-card, .otherOverview-card, .occupancy-card, .income-card, .enquiry-card, .show-card-1,.expenses-card, .quick-card, .revenue-card, .converted-card");
     let mainCard = document.querySelectorAll(".main-card-items");
     showCards.forEach(card => {
         if (card.style.display === "none" || card.style.display === "") {
@@ -109,6 +109,40 @@ function expensesBtn() {
 // quickBtn page script
 function quickBtn() {
     let showCards = document.querySelectorAll(".quick-card, .show-card-1");
+    showCards.forEach(card => {
+        if (card.style.display === "none" || card.style.display === "") {
+            card.style.display = "block"; // Show all show cards
+            if (card.classList.contains("show-card-1")) {
+                card.style.display = "flex"; // Set flex for show-card-1
+            }
+        }
+    });
+    let mainCard = document.querySelectorAll(".main-card-items");
+    mainCard.forEach(card => {
+        card.classList.toggle("hidden"); // Toggle hidden class
+    });
+}
+
+// otherOverviewBtn
+function otherOverviewBtn() {
+    let showCards = document.querySelectorAll(".otherOverview-card, .show-card-1");
+    showCards.forEach(card => {
+        if (card.style.display === "none" || card.style.display === "") {
+            card.style.display = "block"; // Show all show cards
+            if (card.classList.contains("show-card-1")) {
+                card.style.display = "flex"; // Set flex for show-card-1
+            }
+        }
+    });
+    let mainCard = document.querySelectorAll(".main-card-items");
+    mainCard.forEach(card => {
+        card.classList.toggle("hidden"); // Toggle hidden class
+    });
+}
+
+// graphVisualBtn 
+function graphVisualBtn() {
+    let showCards = document.querySelectorAll(".graphVisuals-card, .show-card-1");
     showCards.forEach(card => {
         if (card.style.display === "none" || card.style.display === "") {
             card.style.display = "block"; // Show all show cards
