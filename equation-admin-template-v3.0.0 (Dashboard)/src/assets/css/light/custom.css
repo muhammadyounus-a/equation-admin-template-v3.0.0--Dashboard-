@@ -245,6 +245,10 @@ label {
     transform: translateY(-3px); /* Moves the button up slightly */
 }
 
+.widget-content {
+    padding: 0px 20px 0px 20px !important;
+}
+
 @media (max-width: 1528px) {
     .input-class {
         margin-top: 20px;
@@ -289,5 +293,29 @@ label {
         -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
         scrollbar-width: none; /* Hide scrollbar for Firefox */
         width: 100% !important; /* Ensures container takes full width */
+    }
+}
+
+@media (max-width: 575px) {
+    .info-box-3 {
+        display: block;
+        margin-bottom: 0px !important;
+        max-width: 100% !important;
+        background: #fff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 1px solid #e0e6ed;
+    }
+
+    .info-box-3-icon {
+        margin: 20px 10px 0px 10px !important;
+    }
+
+    .info-box-3-content-wrapper {
+        padding: 10px 10px 20px 10px !important;
+    }
+
+    .widget-content {
+        padding: 0px 5px 0px 5px !important;
     }
 }
