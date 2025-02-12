@@ -249,7 +249,7 @@ label {
     padding: 0px 20px 0px 20px !important;
 }
 
-@media (max-width: 1528px) {
+@media (max-width: 1348px) {
     .input-class {
         margin-top: 20px;
     }
